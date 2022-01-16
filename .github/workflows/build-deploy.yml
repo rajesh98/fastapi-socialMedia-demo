@@ -2,6 +2,15 @@ name: Build and Deploy fastapi
 on: [push, pull_request]
 jobs:
   job1:
+    env:
+      DATABASE_HOSTNAME:localhost
+      DATABASE_PORT:5432
+      DATABASE_PASSWORD:rajesh1234@
+      DATABASE_USERNAME:postgres
+      DATABASE_NAME:fastapi
+      SECRET_KEY:H09d25e094faa6ca255djghdgjdg5636565656b93f7099f6f0f4caa6cf63b88e8d3e7
+      ALGORITHIM:HS256
+      ACCESS_TOKEN_EXPIRE_MINUTES:60
     runs-on: ubuntu-latest
     steps:
       - name: pull the github repo
@@ -18,7 +27,7 @@ jobs:
         run:  |
           pip install pytest
           pytest
-          
+
 
         
       
