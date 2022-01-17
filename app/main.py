@@ -63,7 +63,7 @@ app.include_router(vote.router)
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return {"Hello": "World-successfully deployed to heroku from CI/CD pipeline"}
 
 
 
